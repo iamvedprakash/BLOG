@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+{% block content %}
+<div>
+  <center>
+    <h2 style="margin:10px; color:white;">{{article.title}}</h2>
+    <img src="{{article.thumb.url}}"  alt="NO IMAGE AVAILABLE" height="300px" width="500px"/>
+  </center>
+    <p style="font-size:15px; margin:15px;">Author: {{article.author}}</p>
+    <p style="font-size:20px; margin:15px;">{{article.body}}</p>
+    <p style="font-size:15px; margin:15px;">{{article.date}}</p>
+</div>
+{% endblock %}

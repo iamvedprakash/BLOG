@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <div style="float:left; margin:8px; padding-left: 10px;">
+      <h2><a href="{% url 'home' %}" style="text-decoration:none;" class="blog">BLOG</a></h2>
+    </div>
+    <nav>
+          <div style="float:right;">
+            <ul>
+              {% if user.is_authenticated %}
+              <li><a href="#" class="LS">Welcome: {{user.username}}</a></li>
+              <li><a href="{% url 'article:create' %}" class="LS">Add Article</a></li>
+              <li>
+                <form action="{% url 'account:logout' %}" method="post">
+                  {% csrf_token %}
+                  <button type="submmit">Logout</button>
+                </form>
+              </li>
+                
+                <!--<li style="list-style-type: none; float:right;  display:block; margin:5px; margin-right:10px;"><a href="{% url 'account:logout' %}" class="LS">Logout</a></li>-->
+              {% else %}
+                <li><a href="{% url 'account:login' %}" class="LS">Login</a></li>
+                <li><a href="{% url 'account:sign_up' %}" class="LS">Signup</a></li>
+              {% endif %}
+            </ul>
+          </div>
+    </nav>
+    <center>
+    <div class="wrapper">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </center>
+  
+  </body>
+</html>

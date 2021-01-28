@@ -1,0 +1,128 @@
+body{
+    background-color: #0f121f;
+    /*color: white;*/
+    font-style:inherit;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2em;
+}
+
+body *{
+    font-family: Ubuntu;
+}
+
+p{
+  color: white;
+}
+
+h1, h2, h3, h4, h5{
+    font-weight: normal;
+    margin: 0;
+}
+
+
+.article{
+    height:200px;
+    width:300px;
+    margin:35px;
+    border-style:solid;
+    border-width:3px;
+    display: inline-block;
+    border-color: white;
+}
+
+a, a:visited{
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover{
+   text-decoration: none;
+   color: #00dba0;
+}
+
+.wrapper{
+    position: relative;
+    margin: 0 auto;
+    display: inline-table;
+}
+
+div.wrapper > h1{
+    text-align: center;
+    margin: 100px auto;
+    font-size: 2.4em
+}
+
+nav{
+    justify-self: end;
+}
+
+nav li{
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 20px;
+    margin:5px;
+    margin-right: 15px;
+}
+
+
+nav button{
+    background: none;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    font-size: 1.5em;
+}
+
+.blog:link, .blog:visited, .blog:hover{
+  color:white;
+}
+
+.LS:link, .LS:visited, .LS:hover{
+  color:white;
+  font-size:20px;
+   font-family:auto;
+   text-decoration:none;
+}
+
+.site-form {
+    margin-top: 30px;
+}
+
+.site-form input, .site-form textarea{
+    display: block;
+    margin: 20px 0 0px 0;
+    padding: 10px;
+}
+
+.site-form label{
+  color: white;
+  font-size: 20px;
+}
+
+.helptext, .helptext ul{
+    margin: 0 auto 20px;
+    color: #bbb;
+    font-size: 14px;
+    display: block;
+}
+
+.errorlist li{
+    padding: 10px;
+    list-style-type: none;
+    margin: 10px 0;
+    color: red;
+    font-size: 15px;
+}
+
+.errorlist{
+    padding: 0;
+}
+
+.site-form input[type="submit"]{
+    background: white;
+    border: 0;
+    color: black;
+    font-size: 20px;
+    border-radius: 4px;
+    margin: 10px 0;
+}
